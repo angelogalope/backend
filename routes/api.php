@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\CarouselItemsController;
 use App\Http\Controllers\Api\UsersController;
+use App\Http\Controllers\Api\MessageController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -32,3 +33,11 @@ Route::get('/user/{id}', [UsersController::class, 'show']);
 Route::post('/user', [UsersController::class, 'store']);
 Route::delete('/user/{id}', [UsersController::class, 'destroy']);
 
+
+
+
+Route::get('/message', [MessageController::class, 'index']);
+Route::get('/message/{id}', [MessageController::class, 'show']);
+Route::post('/message/', [MessageController::class, 'store']);
+Route::put('/message/{id}', [MessageController::class, 'update']);
+Route::delete('/message/{id}', [MessageController::class, 'destroy']);
